@@ -11,7 +11,7 @@ app.use(cors({
 app.use(express.json());
 app.use(routes);
 
-const app_http_port = 3333;
+const app_http_port = process.env.PORT || 3333;
 
 app.listen(app_http_port, () => {
   console.log('HTTP server running on port ' + app_http_port);
